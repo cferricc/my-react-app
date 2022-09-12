@@ -11,6 +11,8 @@ const ShowAllTFCs = () => {
     const [tfcs, setTfcs] = useState([])
      
     useEffect( () => { 
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(token)
         fetch('http://ELB-TFC-1697556660.us-east-1.elb.amazonaws.com/category', {
             method: 'GET',
             headers: {

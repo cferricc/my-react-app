@@ -3,7 +3,15 @@ import React , { useState } from 'react';
 import { ShowAllTFCs , CreateTFC} from './Calls';
 
 export default function Dashboard() {
+  
+
+
   const token = localStorage.getItem('token');
+
+  while(!token) {
+    
+  }
+
   const user = JSON.parse(token)
 
   const [createTFC, setCreateTFC] = useState(false)
