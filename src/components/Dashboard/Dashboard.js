@@ -63,5 +63,16 @@ export default function Dashboard() {
         </div>
       );
     }
-  } 
+  } else {
+    return (
+      <div>
+        <h1>Dashboard</h1>
+        <h2>Hello {user.name}!</h2>
+        <h3>TFCs you are subscribed:</h3>
+        {/* Add function that get users subscribed TFCs */}
+        <h3>All TFCs</h3>
+        <ShowAllTFCs/>
+      </div>
+    )
+  }
 }

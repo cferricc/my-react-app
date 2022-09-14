@@ -2,9 +2,6 @@ import React from 'react';
 import { useState , useEffect} from 'react'
 import { Link } from 'react-router-dom';
 
-const token = localStorage.getItem('token');
-const user = JSON.parse(token)
-
     
 const ShowAllTFCs = () => {
 
@@ -51,6 +48,8 @@ const ShowAllTFCs = () => {
 }
 
 const CreateTFC = (name) => {
+    const token = localStorage.getItem('token');
+    const user = JSON.parse(token)
     console.log("CreateTFC")
     return fetch('http://ELB-TFC-1697556660.us-east-1.elb.amazonaws.com/category', {
         method: 'POST',
