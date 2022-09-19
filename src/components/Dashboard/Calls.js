@@ -31,6 +31,7 @@ const ShowAllTFCs = () => {
             <div>
                 {tfcs.map((tfc) => {
                   return (
+                    
                     <div key={tfc.id}>
                         <Link
                             to={`/tfc/${tfc.name}`}

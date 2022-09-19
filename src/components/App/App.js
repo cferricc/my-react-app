@@ -16,7 +16,6 @@ import TFC from '../TFC/TFC';
 import Category from '../TFC/Category/Category';
 import useToken from './UseToken';
 
-
 function App() {
   const { token, setToken } = useToken();
 

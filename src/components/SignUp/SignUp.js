@@ -42,28 +42,34 @@ export default function SignUp({ setToken }) {
   }
 
   return(
-    <div className="login-wrapper">
-      <h1>Please Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <p>Email</p>
+
+      <div className="login">
+      <div className='login_info'>
+      <h1>Sign Up</h1>
+      <form className='login_form' onSubmit={handleSubmit}>
+
+      <label htmlFor='name'>Name</label>
+          <input className='email_button' type="text" onChange={e => setName(e.target.value)}/>
+
+        <label htmlFor='email'>Email Address</label>
           <input type="text" onChange={e => setEmail(e.target.value)}/>
-        </label>
-        <label>
-          <p>Password</p>
+
+          <label htmlFor='password'>Password</label>
           <input type="password" onChange={e => setPassword(e.target.value)}/>
-        </label>
-        <label>
-          <p>Name</p>
-          <input type="text" onChange={e => setName(e.target.value)}/>
-        </label>
-        <div>
-          <button type="submit">Submit</button>
+
+          <div>
+          <button className='login_button' type="submit">Sign Up</button>
         </div>
-        <div>
-          <button onClick={e => setLogin(true)}>Log in</button>
+          </form>
+
+        <div className='login_divider'>
+        <hr /> <span>OR</span> <hr />
         </div>
-      </form>
+        
+        <div>
+          <button className='signup_button' onClick={e => setLogin(true)}>Log in</button>
+        </div>
+    </div>
     </div>
   )
 }

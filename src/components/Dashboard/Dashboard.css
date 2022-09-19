@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(135,46,129);
+  background-image: linear-gradient(to right, #22224b , #872e81, #b72379);
+  position: relative;
+}
+
+div.wrapper{
+  padding: 0%;
+}
+
+  .nameName{
+    color: white;
+    padding: 0px;
+    font-size: 30px;
+    margin-left: 400px;
+    margin-bottom: 0%;
+  }
+
+  .nameTFC{
+    color: white;
+    margin-left: 500px;
+    margin-bottom: 0%;
+  }
+
+  .nameALLTFCS{
+    color: white;
+    margin-left: 500px;
+    margin-top: 0%;
+  }
+
+  .dashboard {
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    gap: 70px;
+  }
+  
+  .container{
+    color: white;
+    size: 50px;
+ }
+
+ .background{
+  background-color: aliceblue;
+  text-align: center;
+  margin-left: 500px;
+  width: 35%;
+  border-radius: 10px;
+ }
+
+ .flexbox{
+  flex-direction: row;
+ }

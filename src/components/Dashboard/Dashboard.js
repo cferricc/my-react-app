@@ -1,19 +1,14 @@
 import React , { useState } from 'react';
-
+import './Dashboard.css'
 import { ShowAllTFCs , CreateTFC} from './Calls';
 
 export default function Dashboard() {
-  
-
-
   const token = localStorage.getItem('token');
-
   while(!token) {
     
   }
 
   const user = JSON.parse(token)
-
   const [createTFC, setCreateTFC] = useState(false)
   const [name, setName] = useState();
 
@@ -37,7 +32,7 @@ export default function Dashboard() {
     if (createTFC) {
 
       return (
-        <div>
+        <div className='dashboard'>
           <form onSubmit={handleSubmit}>
             <label>
               <p>Name</p>
@@ -53,12 +48,12 @@ export default function Dashboard() {
     } else {
       return(
         <div>
-            <button onClick={(() => setCreateTFC(true))}>Create new TFC</button>
+            <button className='Button' onClick={(() => setCreateTFC(true))}>Create new TFC</button>
             <h1>Dashboard</h1>
             <h2>Hello {user.name}!</h2>
             <h3>TFCs you are subscribed:</h3>
             {/* Add function that get users subscribed TFCs */}
-            <h3>All TFCs</h3>
+            <div>All TFCs</div>
             <ShowAllTFCs/>
         </div>
       );
@@ -66,13 +61,15 @@ export default function Dashboard() {
   } else {
     return (
       <div>
-        <h1>Dashboard</h1>
-        <h2>Hello {user.name}!</h2>
-        <h3>TFCs you are subscribed:</h3>
+      <div className='dashboard'> </div>
+        <p className='nameName'>Hello, {user.name}!</p>
+        <box className='flexbox'>
+        <p className='nameTFC'>My TFCs:</p>
         {/* Add function that get users subscribed TFCs */}
-        <h3>All TFCs</h3>
-        <ShowAllTFCs/>
-      </div>
+        <p className='nameALLTFCS'>All TFCs: </p>
+        <div className='background'><ShowAllTFCs/> </div>
+        </box>  
+        </div>
     )
   }
 }
